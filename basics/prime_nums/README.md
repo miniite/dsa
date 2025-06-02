@@ -36,3 +36,16 @@ This foundational concept connects to real-world applications and algorithmic ch
 | [**6k±1 Optimization**](6k_1opt.md) | O(√n)           | O(1)             | Tests 2, 3, and 6k±1 numbers up to √n. | Reduces checks by ~2/3 vs. trial division. Simple, deterministic, good for numbers up to ~10^9. |
 | [**Fermat Primality**](fermat.md)  | O(k log² n)     | O(1)             | Probabilistic test using Fermat’s Little Theorem with k bases. | Faster than 6k±1, simpler than Miller-Rabin. Susceptible to Carmichael numbers, less reliable. Good for learning probabilistic methods. |
 | [**Miller-Rabin**](miller-rabin.md)      | O(k log³ n)     | O(1)             | Probabilistic test with strong witness checks. | Fastest and most reliable for large numbers. Used in cryptography. More complex but robust. |
+
+
+## Methods to find N Primes and Nth Prime
+
+Read about [`find_prime`](find_prime.md) method to understand how we generate the prime number or prime number list after checking each number
+
+
+| Method                | Time Complexity (Both)           | Space Complexity (nth Prime) | Space Complexity (All n Primes)        | Key Difference                                    |
+|-----------------------|-------------------------------|-----------------------------|---------------------------------------|--------------------------------------------------|
+| Brute Force           | O(n² ln(n))                  | O(1)                        | O(n)                                  | Only space increases for list storage; no runtime difference. |
+| Trial Division        | O(n<sup>(1.5)</sup> ln<sup>(1.5)</sup>(n))         | O(1)                        | O(n)                                  | Same as brute force—only space increases for list. |
+| 6k±1 Optimization     | O(n<sup>(1.5)</sup> ln<sup>(1.5)</sup>(n))       | O(1)                        | O(n)                                  | Same as trial division—only space increases for list. |
+| Sieve of Eratosthenes | O(n log(n) log log(n))       | O(n log(n))                 | O(n log(n)) + O(n) ≈ O(n log(n))      | Negligible space increase; no runtime difference. |
