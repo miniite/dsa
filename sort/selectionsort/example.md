@@ -1,6 +1,4 @@
-Below is a very detailed explanation of the time complexity differences between the two Selection Sort implementations—Traditional (Inner Loop) and Inbuilt Methods (`min()` and `index()`)—using two specific examples. Each example will demonstrate how the comparisons work step-by-step for both methods, highlighting the constant factor difference due to the number of scans.
-
----
+Examples for Selection Sort
 
 ## Example 1: Sorting a Small List with No Duplicates
 **Input List**: `[64, 34, 25, 12]` (n = 4)
